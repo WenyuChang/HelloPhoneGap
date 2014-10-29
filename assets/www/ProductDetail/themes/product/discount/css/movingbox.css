@@ -1,0 +1,77 @@
+#slider {
+    width: 250px;
+    height: 410px;
+    margin: 0 auto;
+    position: relative;
+	border: 10px solid #ccc;
+}
+
+.scroll {
+	overflow: hidden;
+	width: 245px;
+	height: 405px;
+    margin: 0 0 0 0;
+    position: relative;
+}
+
+.scrollContainer {
+	position: relative;
+	margin: 0 0 0 0;
+}
+
+.scrollContainer div.panel {
+    padding: 10px;
+    width: 225px;
+	height: 400px;
+}
+
+#left-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12px;
+	bottom: 0;
+	background: url(../images/leftshadow.png) repeat-y;
+}
+
+#right-shadow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 12px;
+	bottom: 0;
+	background: url(../images/rightshadow.png) repeat-y;
+}
+
+.inside {
+	padding: 10px;
+	border: 1px solid #999;
+	width: 205px;
+	height: 365px;
+}
+
+.inside img {
+	display: block;
+	border: 1px solid #666;
+	margin: 0 0 10px 0;
+	width: 205px;
+	height: 280px;
+}
+
+.scrollButtons {
+    position: absolute;
+    top: 170px;
+    cursor: pointer;
+}
+
+.scrollButtons.left {
+    left: -45px;
+}
+
+.scrollButtons.right {
+    right: -45px;
+}
+
+.hide {
+    display: none;
+}

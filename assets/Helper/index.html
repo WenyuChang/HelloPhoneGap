@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Arvato Assistant</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        <link type="text/css" rel="stylesheet" media="screen" href="jqtouch/jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="themes/jqt/theme.css">
+        
+        <script type="text/javascript" src="jqtouch/jquery.js"></script>
+        <script type="text/javascript" src="jqtouch/jqtouch.js"></script>
+        <script type="text/javascript" src="assistant.js"></script>
+   </head>
+    <body>
+        <div id="home" >
+            <div class="toolbar">
+                <h1>Arvato Assistant</h1>
+            </div>
+            
+            <ul class="">
+            	<li class="arrow"><a href="#getLost">Get Lost</a></li>
+                <li class="arrow"><a href="#taxi">Call Taxi</a></li>
+                <li class="arrow"><a href="#reserve">Restaurant Reservation</a></li>
+                <li class="arrow"><a href="#emergency">Emergency</a></li>
+            </ul>
+            <a href="http://www.baidu.com">
+            <img id="img1" src="img/map.jpg" width="100%" height="22.8" onmousedown="" />
+            </a>
+        </div>
+        
+        
+        <div id="getLost">
+        	<div class="toolbar" align="center">
+                <h1>Get Lost</h1>
+                <a class="button back" href="#">Back</a>
+                <a class="button flip" href="#map">Map</a>
+            </div>
+            
+            <ul class="">
+            	<li class="">
+            		Your Location:<br>
+            		<div style="padding-left:20px;">
+            			<font size="2">
+            			29540 Kohoutek Way<br>
+            			Union City, CA 94587<br>
+            			USA
+            			</font>
+            		</div>
+            		
+<!--             		<br> -->
+<!--             		<br> -->
+<!--             		<a style="text-align:center;" href="#map">map</a> -->
+            	</li>
+            </ul>
+            <ul style="display:none;" class="">
+                <li class="arrow"><a href="#getdirection">Get Direction<br></a></li>
+            </ul>
+            <ul>
+            	<li class="">
+            		<a href="#" onclick="lostWay();">
+            			Call for Help<br>
+            			<div style="padding-left:20px;">
+	            			<font size="2">Send your location...</font><br>
+	            			<font size="2" color="gray">We will call back in a minute...</font><br>
+            			</div>
+            		</a>
+            	</li>
+            </ul>
+        </div>
+        
+        <div id="getdirection">
+        	<div class="toolbar" align="center">
+                <h1>Get Direction</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            
+            <div style="align:center;">
+	            <form id="form-1" style="align-text:center;margin:0;width:98%;border:2px solid #ccc;padding:5px;">
+		        	<table style="width:100%;padding-right:5px;">
+		        		<tr>
+		        			<td style="width:30%;text-align:right"><label for="form-1">Start Point: </label></td>
+		        			<td style="width:70%;"><input id="form-1" style="width:100%;" name="name" type="text" placeholder="Input start point" /></td>
+		        		</tr>
+		        		
+		        		<tr>
+		        			<td style="width:30%;text-align:right"><label for="form-1">End Point: </label></td>
+		        			<td style="width:70%;"><input id="form-1" style="width:100%;" name="name" type="text" placeholder="Input end point" /></td>
+		        		</tr>
+		        		<tr><td colspan="2" style="text-align:center;"><button type="submit">Submit</button></td></tr>
+		        	</table>
+		        </form>
+	        </div>
+	        <div style="height:20px"></div>
+	        
+	        <div style="border:1px solid #ccc;width:100%;height:100%;">
+	        	<img src="img/map.jpg" width="100%">
+	        </div>
+        </div>
+        
+        
+        
+        
+        <div id="taxi">
+        	<div class="toolbar">
+                <h1>Call Taxi</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            
+            <ul>
+            	<li><a href="#">Call Taxi From Your Location...</a></li>
+            	<li>
+            		<a href="#">
+            			Call Taxi...<br>
+            			<div style="padding-left:20px;">
+	            			<font size="2" color="gray">
+	            			Waiting for call back<br>
+	            			</font>
+            			</div>
+            		</a>
+            	</li>
+            </ul>
+        </div>
+        
+        <div id="reserve" class="notransform">
+            <div class="toolbar">
+                <h1>Reservation</h1>
+                <a href="#" class="back">Back</a>
+                <a class="button flip" href="#">Map</a>
+            </div>
+            
+            <ul>
+            	<li>
+            		Choose Restaurant
+            	</li>
+            	<li class="arrow">
+            		<a href="#map">
+            			<div style="padding-left:20px;">
+	            			<font size="3">
+	            				From Map<br>
+	            			</font>
+            			</div>
+            		</a>
+            	</li>
+            	<li class="arrow">
+            		<a href="#foodStyle">
+            			<div style="padding-left:20px;">
+	            			<font size="3">
+	            				According to Style<br>
+	            			</font>
+            			</div>
+            		</a>
+            	</li>
+            </ul>
+        </div>
+        
+        <div id="foodStyle">
+        	<div class="toolbar">
+                <h1>Food Style</h1>
+                <a href="#" class="back">Back</a>
+            </div>
+            
+            <ul class="">
+            	<li class="arrow"><a href="#">Chinese Food<br><font size="2">.........<br>.........</font></a></li>
+                <li class="arrow"><a href="#">Western Food<br><font size="2">.........<br>.........</font></a></li>
+                <li class="arrow"><a href="#">Japanese Food<br><font size="2">.........<br>.........</font></a></li>
+            	<li class="arrow"><a href="#">Korean Cuisine<br><font size="2">.........<br>.........</font></a></li>
+                <li class="arrow"><a href="#">Others<br><font size="2">.........<br>.........</font></a></li>
+            </ul>
+        </div>
+        
+        <div id="emergency">
+        	<div class="toolbar">
+                <h1>Emergency</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            
+            <ul class="">
+            	<li><a href="sms:10086?body=aaaa" style="text-align:center;"><font size="5" color="red">Emergency SMS</font></a></li>
+            	<li><a href="tel:10086" style="text-align:center;"><font size="5" color="red">Emergency Call</font></a></li>
+            
+            </ul>
+		</div>
+		
+		<div id="map">
+        	<div class="toolbar">
+                <h1>Map</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <div>
+            	<img src="img/map.jpg" width="100%"/>
+            </div>
+		</div>
+    </body>
+</html>
